@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restic GUI</title>
+    <link type="text/css" rel="stylesheet" href="materialize\css\materialize.css">
+    <link type="text/css" rel="stylesheet" href="iconfont\material-icons.css">
+    <link type="text/css" rel="stylesheet" href="index.css">
+    <script defer src="materialize\js\materialize.js"></script>
+    <script defer src="snapshots.js"></script>
+    
+</head>
+
+<!--Body Start-->
+<body>
+    <nav>
+        <div class="nav-wrapper red darken-4">
+            <a href="index.html" class="brand-logo left">Restic GUI</a>
+            <ul class="right">
+                <li><a href="snapshots.html">Snapshots</a></li>
+                <li><a href="#">Configure</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="main">
+                
+        <button id="btn_getSnapshots" onclick="getResticSnapshots()" class="btn blue darken-4">Get Snapshots</button>
+        <button id="btn_getSnapshots" onclick="exePruneSnapshots()" class="btn blue darken-4">Prune Snapshots</button>
+        <div id="prune_status"></div>
+        <div id="list_snapshots">
+            <ul id="ul_snapshots" class="collection">
+                
+            </ul>
+      </div>
+            
+
+    </div>
+
+<!--Footer Start-->
+        <div id="foots" class="red darken-4">
+            
+            <div id="restic_version" class="container">
+                <span id="show_version"></span>
+            </div>
+            
+        </div>
+ 
+</body>
+
+
+
+</html>

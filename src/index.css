@@ -1,0 +1,115 @@
+body {
+    background-color: #1E1E1E;
+    display: block;
+    margin: 8px;
+}
+
+span {
+  color: white;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 64px;
+}
+
+.input-field label {
+  color: #b2ff59 ;
+}
+
+input {
+  color: #A6A6A6;
+}
+
+#main {
+
+  margin-top: 65px;
+    /* margin-left: .5%;
+    margin-right: .5%;
+    margin-top: .5%; */
+}
+
+#list_snapshots {
+
+  width: 500px;
+  height: 70vh;
+  overflow: auto;
+  
+}
+
+#prune_status {
+  color: white;
+    
+}
+
+.text-vanish {
+  -webkit-animation: seconds 1.0s forwards;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 5s;
+  animation: seconds 1.0s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 5s;
+  position: relative;
+}
+
+@-webkit-keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    left: -9999px; 
+  }
+}
+
+@keyframes seconds {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    left: -9999px; 
+  }
+}
+
+#ul_snapshots {
+
+  width: 100%
+}
+
+#ul_snapshots li {
+
+  width: 100%
+}
+
+#ul_snapshots li span {
+  color: unset;
+  width: 100%;
+  font-weight: bold;
+}
+
+#btn_restore {
+  margin: 1%;
+}
+
+#btn_forget {
+  margin: 1%;
+}
+
+#div-li-paths p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+#foots {
+
+  position: absolute;
+  color: white;
+  bottom: 0px;
+  width: 97vw;
+  /* margin: unset; */
+  
+}
