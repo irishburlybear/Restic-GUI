@@ -11,12 +11,13 @@
 </head>
 
 <!--Body Start-->
-<body>
+<body onload="getBodyLoad()">
     <nav>
         <div class="nav-wrapper red darken-4">
             <a href="index.html" class="brand-logo left">Restic GUI</a>
             <ul class="right">
-                <li><a href="snapshots.html">Snapshots</a></li>
+                <li class=""><a href="index.html">Backup</a></li>
+                <li class="active"><a href="snapshots.html">Snapshots</a></li>
                 <li><a href="#">Configure</a></li>
             </ul>
         </div>
@@ -24,16 +25,15 @@
 
     <div id="main">
                 
-        <button id="btn_getSnapshots" onclick="getResticSnapshots()" class="btn blue darken-4">Get Snapshots</button>
-        <button id="btn_getSnapshots" onclick="exePruneSnapshots()" class="btn blue darken-4">Prune Snapshots</button>
-        <div id="prune_status"></div>
+        <!-- <button id="btn_getSnapshots" onclick="getResticSnapshots()" class="btn blue darken-4">Get Snapshots</button> -->
+        <h4 class="grey-text lighten-3">Snapshots:</h4>
         <div id="list_snapshots">
             <ul id="ul_snapshots" class="collection">
                 
             </ul>
       </div>
-            
-
+      <button id="btn_getSnapshots" onclick="exePruneSnapshots()" class="btn blue darken-4">Prune Snapshots</button>
+      <div id="prune_status"></div>
     </div>
 
 <!--Footer Start-->

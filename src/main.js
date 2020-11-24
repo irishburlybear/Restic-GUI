@@ -11,9 +11,12 @@ let win;
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 900,
-    height: 600,
+    width: 580,
+    height: 700,
     minWidth: 450,
+    minHeight: 600,
+    //maxWidth: 580,
+    //maxHeight: 700,
     webPreferences: {
       allowRunningInsecureContent: false,
       contextIsolation: true,

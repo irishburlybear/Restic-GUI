@@ -1,5 +1,11 @@
 const prune_status = document.getElementById('prune_status')
 
+function getBodyLoad() {
+    //We created a Body load function just in case we wanted to start others things not planned.
+    //gives us some growing room if needed.
+    getResticSnapshots()
+}
+
 function getResticSnapshots() {
     window.restic.send("toMainRestic",["snapshots","--json"]);
 }
@@ -70,13 +76,13 @@ window.restic.receive("fromMainRestic", (data) => {
             li.setAttribute('id',obj[i].short_id)
 
             //Any classes we need to add (using materialize)
-            li.className = "collection-item"
+            li.className = "collection-item grey darken-3"
 
             //Begin the div for the main content of the li element:
             li.innerHTML = `<div>
             <p><span id="span-date">Date: </span>` + months[snapshotDate.getMonth()] + `-` + snapshotDate.getDate() + `-` + snapshotDate.getFullYear() + `</p>` +
             `<span id="span-short_id">Short ID: </span>` + obj[i].short_id +
-            `<button id="btn_restore" onclick="f_restore('`+obj[i].short_id+`')" class="btn right blue darken-4">Restore</button>` +
+            `<button id="btn_restore" onclick="f_restore('`+obj[i].short_id+`')" class="btn right blue darken-4 pulse">Restore</button>` +
             `<button id="btn_forget" onclick="f_forget('`+obj[i].short_id+`')" class="btn right red darken-4">Forget</button>` +
             `</div>`
             //We need to call a function to get the list of paths into the corrent div element:

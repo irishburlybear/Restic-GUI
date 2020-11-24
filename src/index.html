@@ -14,10 +14,10 @@
 <body onload="getResticVersion()">
     <nav>
         <div class="nav-wrapper red darken-4">
-            <a href="index.html" class="brand-logo left">Restic GUI</a>
+            <a href="#" class="brand-logo left">Restic GUI</a>
             <ul class="right">
+                <li class="active"><a href="index.html">Backup</a></li>
                 <li><a href="snapshots.html">Snapshots</a></li>
-                <li><a href="#">Restore</a></li>
                 <li><a href="#">Configure</a></li>
             </ul>
         </div>
@@ -36,8 +36,8 @@
         
         <button class="waves-effect waves-light btn light-blue darken-4" onclick="initBackup()">Backup</button>
 
-        <div class="row">
-            <div class="col s12 m6">
+        <div id="backup_info_card" class="row">
+            <div class="col s12 m12">
             
             <div class="card grey darken-3">
                 
@@ -60,7 +60,12 @@
            
     </div>
 
-     <!--Footer Start-->
+     
+
+ 
+</body>
+
+<!--Footer Start-->
         <div id="foots" class="red darken-4">
             
             <div id="restic_version" class="container">
@@ -68,10 +73,6 @@
             </div>
             
         </div>
-
- 
-</body>
-
 
 
 </html>
