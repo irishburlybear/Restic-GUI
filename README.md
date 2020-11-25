@@ -19,7 +19,10 @@ forget snapshots
 prune snapshots
 
 Upnext:
-Creating restore functionality using a tree view of some sorts.
+~~Creating restore functionality using a tree view of some sorts.~~
+Creating restore by just searching for the files and using checkboxes for select.
+Keeping it simple.
+
 Select multiple files/folders for restore.
 Selecting an output folder for said files/folders.
 
